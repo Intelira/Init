@@ -1,0 +1,15 @@
+SET FOREIGN_KEY_CHECKS = 0;
+
+TRUNCATE TABLE `keluhan`;
+
+TRUNCATE TABLE `login_credential`;
+
+TRUNCATE TABLE `login_history`;
+
+TRUNCATE TABLE `patients`;
+
+TRUNCATE TABLE `sessions`;
+
+TRUNCATE TABLE `staff`;
+
+SET FOREIGN_KEY_CHECKS = 1;

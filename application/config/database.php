@@ -7,12 +7,11 @@ $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
-	'dsn' => '',
 	'port' => 3308,
 	'hostname' => '127.0.0.1',
 	'username' => 'root',
 	'password' => 'rootpass',
-	'database' => 'sipiter',
+	'database' => 'djamilsiti',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

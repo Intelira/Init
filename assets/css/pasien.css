@@ -1,0 +1,330 @@
+.pasien-wrap { border-radius: 8px; overflow: hidden; border: 1px solid #bae6fd; }
+
+.pasien-toolbar {
+  padding: 12px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #bae6fd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pasien-search-box { position: relative; flex: 1; }
+
+.pasien-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #adb5bd;
+  font-size: 13px;
+  pointer-events: none;
+}
+
+.pasien-search-input {
+  width: 100%;
+  height: 34px;
+  padding: 0 10px 0 30px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  font-size: 13px;
+  color: #212529;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.pasien-search-input:focus { border-color: #adb5bd; background: #ffffff; }
+
+.pasien-search-input::placeholder { color: #adb5bd; }
+
+.pasien-limit-label { font-size: 12px; color: #6c757d; white-space: nowrap; }
+
+.pasien-limit-select {
+  height: 34px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid #dee2e6;
+  background: #f8f9fa;
+  color: #212529;
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  text-align: center;
+}
+
+.pasien-btn-add {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid #7dd3fc;
+  background: #bae6fd;
+  color: #075985;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background 0.15s ease;
+}
+
+.pasien-btn-add:hover { background: #7dd3fc; color: #0c4a6e; text-decoration: none; }
+
+.pasien-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+
+.pasien-table thead th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: #075985;
+  background: #e0f2fe;
+  border-bottom: 2px solid #bae6fd;
+  white-space: nowrap;
+}
+
+.pasien-table tbody tr { border-bottom: 1px solid #e7f6fe; transition: background 0.12s ease; }
+
+.pasien-table tbody tr:last-child { border-bottom: none; }
+
+.pasien-table tbody tr:nth-child(odd) { background: #ffffff; }
+
+.pasien-table tbody tr:nth-child(even) { background: #f0f9ff; }
+
+.pasien-table tbody tr:hover { background: #e7f6fe; }
+
+.pasien-table tbody td { padding: 11px 14px; color: #212529; vertical-align: middle; }
+
+.pasien-num { color: #6c757d; font-size: 12px; }
+
+.pasien-mono { font-family: monospace; }
+
+.pasien-action-group { display: flex; align-items: center; gap: 6px; }
+
+.pasien-btn-view,
+.pasien-btn-keluhan,
+.pasien-btn-reset {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  border: 1px solid #7dd3fc;
+  background: #ffffff;
+  color: #075985;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 13px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.pasien-btn-view:hover,
+.pasien-btn-keluhan:hover,
+.pasien-btn-reset:hover { background: #075985; color: #ffffff; text-decoration: none; }
+
+.pasien-btn-reset:hover { background: #b45309; border-color: #b45309; color: #ffffff; }
+
+button.pasien-btn-reset {
+  padding: 0;
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.pasien-empty { padding: 40px 16px; text-align: center; font-size: 13px; color: #adb5bd; }
+
+.pasien-footer {
+  padding: 10px 16px;
+  background: #ffffff;
+  border-top: 1px solid #bae6fd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pasien-count { font-size: 12px; color: #6c757d; }
+
+.pasien-pages { display: flex; gap: 4px; }
+
+.pasien-page-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid #7dd3fc;
+  background: #e0f2fe;
+  color: #075985;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.pasien-page-btn:hover { background: #bae6fd; }
+
+.pasien-page-btn.active { background: #38bdf8; border-color: #0ea5e9; color: #ffffff; font-weight: 600; }
+
+.pasien-input-page { padding-bottom: 60px; }
+
+.pasien-input-wrap {
+  margin-top: 24px;
+  background: #ffffff;
+  border-radius: 26px;
+  padding: 26px;
+  border: 1px solid #bae6fd;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  transition: border-color 0.2s ease;
+}
+
+.pasien-input-wrap[data-mode="edit"] { border-color: #f59e0b; box-shadow: 0 4px 16px rgba(245, 158, 11, 0.10); }
+
+.pasien-wrap.d-none, .pasien-input-wrap.d-none { display: none; }
+
+.pasien-input-header {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #075985;
+}
+
+.pasien-input-header .lead { margin: 0; font-size: 1.15rem; font-weight: 400; color: #212529; }
+
+.pasien-input-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #075985;
+  background: #e0f2fe;
+}
+
+.pasien-mode-badge {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: #f1f5f9;
+  color: #64748b;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pasien-mode-badge.is-editing { background: #fef3c7; color: #92400e; }
+
+.pasien-btn-edit {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 10px;
+  background: #e0f2fe;
+  color: #075985;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pasien-btn-edit:hover { background: #075985; color: #ffffff; }
+
+.pasien-btn-edit.is-active { background: #38bdf8; color: #ffffff; }
+
+.pasien-form-floating { margin-bottom: 16px; }
+
+.pasien-form-floating label { display: block; font-size: 0.82rem; font-weight: 400; color: #667085; margin-bottom: 7px; }
+
+.pasien-input {
+  min-height: 44px;
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #bae6fd;
+  background-color: #f0f9ff;
+  padding: 10px 14px;
+  color: #212529;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.pasien-input:focus {
+  outline: none;
+  border-color: #075985;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(7, 89, 133, 0.15);
+}
+
+.pasien-input[readonly] {
+  background: #f7fbfe;
+  border-color: #e0f2fe;
+  color: #6b7a85;
+  cursor: default;
+  box-shadow: none;
+}
+
+.pasien-input:not([readonly]):not(:disabled) {
+  background-color: #ffffff;
+  border-color: #38bdf8;
+  color: #212529;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+.pasien-input:not([readonly]):not(:disabled):hover { border-color: #0ea5e9; }
+
+select.pasien-input:disabled {
+  background: #f7fbfe;
+  border-color: #e0f2fe;
+  color: #6b7a85;
+  cursor: default;
+}
+
+select.pasien-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: none;
+}
+
+select.pasien-input::-ms-expand { display: none; }
+
+.pasien-input-actions { display: flex; justify-content: flex-end; gap: 12px; margin-top: 10px; }
+
+.pasien-btn-soft {
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 10px 22px;
+  font-weight: 400;
+  background: #ffffff;
+  color: #667085;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pasien-btn-soft:hover { color: #075985; text-decoration: none; }
+
+.pasien-btn-primary {
+  border: none;
+  border-radius: 15px;
+  padding: 10px 22px;
+  font-weight: 400;
+  background: #075985;
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(7, 89, 133, 0.20);
+  cursor: pointer;
+}
+
+.pasien-btn-primary:hover { color: #ffffff; background-color: #0c4a6e; transform: translateY(-1px); }
+
+@media (max-width: 768px) {
+  .pasien-input-page { padding-bottom: 160px; }
+  .pasien-input-wrap { padding: 22px; border-radius: 24px; }
+  .pasien-input-actions { flex-direction: column-reverse; }
+  .pasien-input-actions .pasien-btn-primary,
+  .pasien-input-actions .pasien-btn-soft { width: 100%; justify-content: center; }
+}

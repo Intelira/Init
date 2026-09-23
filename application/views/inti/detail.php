@@ -69,21 +69,6 @@
 </div>
 
 <script>
-// Pecah Teks Saran Jadi Poin Per Kalimat (Teks Asli Tidak Diubah, Hanya Presentasinya)
-function renderSaranList(selector, text) {
-  // Special Modifier
-  const $list = $(selector + ' .saran-list').empty();
-  if (!text || text.trim() === '-' ) {
-    $list.append($('<li>').text(text || '-'));
-    return;
-  }
-  const kalimat = text.match(/[^.]+(\.|$)/g) || [text];
-  kalimat.forEach(function(k) {
-    k = k.trim();
-    if (k) $list.append($('<li>').text(k));
-  });
-}
-
 $(document).ready(function() {
   document.getElementById('label_mukositis').value = labelKeluhan('mukositis', <?= $result['mukositis'] ?>);
   document.getElementById('label_kelelahan').value = labelKeluhan('kelelahan', <?= $result['kelelahan'] ?>);
