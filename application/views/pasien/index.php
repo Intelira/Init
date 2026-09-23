@@ -109,9 +109,9 @@ function renderBody(rows, start) {
           <a href="${BASE_URL}pasien/keluhan/${p.kode}" class="pasien-btn-keluhan" title="Data Keluhan">
             <i class="bi bi-file-spreadsheet-fill"></i>
           </a>
-          <button type="button" class="pasien-btn-reset" title="Reset Kata Sandi" onclick="resetPassword('${p.kode}')">
+          <a href="${BASE_URL}pasien/repass/${p.kode}" class="pasien-btn-reset" title="Reset Kata Sandi">
             <i class="bi bi-key-fill"></i>
-          </button>
+          </a>
         </div>
       </td>
     </tr>
@@ -132,18 +132,6 @@ function renderPages(pages) {
 }
 
 function goPage(p) { currentPage = p; render(); }
-
-function resetPassword(kode) {
-  if (!confirm('Reset kata sandi pasien ini ke default?')) return;
-
-  $.ajax({
-    url: BASE_URL + 'pasien/replace/' + kode,
-    method: 'POST',
-    complete: function() {
-      window.location.href = '<?= base_url('pasien') ?>';
-    }
-  });
-}
 
 function handlers() {
   $('#pasienSearch').on('input', function() { currentPage = 1; render(); });

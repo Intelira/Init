@@ -17,7 +17,7 @@ class Pasien extends MainController {
 
   public function index(){
     // Main Tampilan Keluhan
-    if (!permissible($this->role, 'is_view')) {
+    if (!permissible($this->role, 'readable')) {
       blokir();
     }
     // File
@@ -29,7 +29,7 @@ class Pasien extends MainController {
 
   public function historia(){
     // Tampilkan Data Tabel
-    if (!permissible($this->role, 'is_view')) {
+    if (!permissible($this->role, 'readable')) {
       blokir();
     }
     // Model
@@ -40,7 +40,7 @@ class Pasien extends MainController {
 
   public function insert(){
     // Main Tampilan Input Data Pasien
-    if (!permissible($this->role, 'is_view')) {
+    if (!permissible($this->role, 'readable')) {
       blokir();
     }
     // File
@@ -73,7 +73,7 @@ class Pasien extends MainController {
 
   public function detail($id){
     // Main Tampilan Input Data Pasien
-    if (!permissible($this->role, 'is_view')) {
+    if (!permissible($this->role, 'readable')) {
       blokir();
     }
     // Hasil
@@ -87,7 +87,7 @@ class Pasien extends MainController {
 
   public function repass($userKey){
     // Controller Default Kata Sandi
-    if (!permissible($this->role, 'is_edit')) {
+    if (!permissible($this->role, 'editable')) {
       blokir();
     }
     // Model
@@ -101,12 +101,12 @@ class Pasien extends MainController {
       alerta('error', 'Perbaikan Kata Sandi Gagal !');
     }
     // Hasil Array
-    echo json_encode(array('status' => $result ? 'success' : 'error'));
+    return redirect(base_url('pasien'));
   }
 
   public function keluhan($userKey){
     // Menampilkan Histori Input Keluhan Satu Pasien
-    if (!permissible($this->role, 'is_view')) {
+    if (!permissible($this->role, 'readable')) {
       blokir();
     }
     // Model

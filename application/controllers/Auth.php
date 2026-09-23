@@ -47,7 +47,8 @@ class Auth extends OutController {
             $this->session->set_userdata($sessiondata);
             $message = "Selamat Datang !";
             alerta('success', $message);
-            return redirect(base_url('inti'));
+            $tujuan = ($result['roleKey'] == 2) ? 'keluhan' : 'inti';
+            return redirect(base_url($tujuan));
           } else {
             // Kalau User Sign In Gagal | User Tidak Aktif | Data Uji Coba Plus Satu
             dataUjiCoba($nik);

@@ -8,9 +8,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'User123!',
-	'database' => 'djamil_siti',
+	'username' => 'djamiluser',
+	'password' => 'rootpass',
+	'database' => 'djamilsiti',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -9,10 +9,9 @@ class Pasien_model extends CI_Model {
     parent::__construct();
   }
 
-  public function getTabelPasien($limit = 10, $offset = 0){
+  public function getTabelPasien(){
     $this->db->select('id, kode, mrn, fullname, dob, gender, alamat');
     $this->db->order_by('id', 'desc');
-    $this->db->limit($limit, $offset);
     $result = $this->db->get('patients');
     return $result->result_array();
   }
@@ -34,9 +33,9 @@ class Pasien_model extends CI_Model {
   public function userKataSandi($userKey){
     // Reset Kata Sandi Ke Default (123)
     $this->db->where('userKey', $userKey);
-    $data = array('password' => password_hash('123', PASSWORD_DEFAULT));
-    $this->db->update('login_credential', $data);
-    return $this->db->affected_rows() > 0;
+    $pass = kataSandi('hash', 'password');
+    $data = array('password' => $pass);
+    return $this->db->update('login_credential', $data);
   }
 
   public function keluhanSingular($userKey){

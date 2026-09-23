@@ -15,7 +15,7 @@
     <!-- Keluhan -->
     <a href="<?php echo base_url('keluhan'); ?>" class="nav-link nav-item-float flex-fill <?php echo ($segment == 'keluhan') ? 'text-primary active' : 'text-secondary'; ?>">
       <i class="bi bi-file-spreadsheet-fill fs-5"></i>
-      <div class="nav-text">Keluhan</div>
+      <div class="nav-text">Tabel Keluhan</div>
     </a>
     <?php } ?>
 
