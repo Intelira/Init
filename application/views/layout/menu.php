@@ -25,7 +25,7 @@
       <div class="nav-text">Blog</div>
     </a>
 
-    <a href="#" target="_blank" class="nav-link nav-item-float flex-fill text-secondary">
+    <a href="https://wa.me/6282366257376" target="_blank" class="nav-link nav-item-float flex-fill text-secondary">
       <i class="bi bi-whatsapp fs-5"></i>
       <div class="nav-text">WhatsApp</div>
     </a>
