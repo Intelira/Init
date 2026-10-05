@@ -43,7 +43,6 @@
           <div class="col-md-6">
             <label class="form-label-fancy">Daftar Sebagai</label>
             <select name="roleKey" id="roleKey" name="roleKey" class="form-control fancy-input">
-              <option value="1">Mie Ayam Komplit</option>
               <option value="3">Pasien</option>
             </select>
           </div>
