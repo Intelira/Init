@@ -12,11 +12,11 @@
         </div>
         <form method="post" action="<?= base_url('profile/paslish'); ?>">
           <div class="form-floating-soft">
-            <label>Nomor Induk Kependudukan</label>
+            <label class="mb-2">Nomor Induk Kependudukan</label>
             <input type="text" class="form-control custom-input" value="<?= $this->session->userdata('usernik'); ?>" readonly>
           </div>
-          <div class="form-floating-soft">
-            <label>Password Baru</label>
+          <div class="form-floating-soft pt-2">
+            <label class="mb-2">Password Baru</label>
             <div class="input-group">
               <input type="password" class="form-control custom-input" id="password" name="password">
               <span class="input-group-text password-toggle" id="togglePassword">
@@ -24,8 +24,8 @@
               </span>
             </div>
           </div>
-          <div class="form-floating-soft">
-            <label>Konfirmasi Ulang Password</label>
+          <div class="form-floating-soft pt-2">
+            <label class="mb-2">Konfirmasi Ulang Password</label>
             <div class="input-group">
               <input type="password" class="form-control custom-input" id="confirmPassword">
               <span class="input-group-text password-toggle" id="toggleConfirmPassword">
@@ -34,8 +34,8 @@
             </div>
             <small id="passwordError" class="form-error"></small>
           </div>
-          <div class="profile-actions">
-            <button type="submit" class="btn btn-care">
+          <div class="profile-actions pt-4 d-flex justify-content-end">
+            <button type="submit" class="btn btn-primary">
               Simpan Kata Sandi Baru
             </button>
           </div>
