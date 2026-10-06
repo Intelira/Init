@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="<?= base_url('assets/css/profile.css'); ?>">
 
 <div class="profile-page">
-  <form method="post" action="<?= base_url('profile/publish'); ?>" id="profileForm">
+  <form method="post" action="<?= base_url('auth/register'); ?>" id="profileForm">
     <section class="section">
       <div class="section-head">
         <div class="section-head-left">

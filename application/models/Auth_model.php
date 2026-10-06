@@ -56,7 +56,7 @@ class Auth_model extends CI_Model {
     // Del Kata Sandi
     unset($data['password']);
     // Tabel Patients
-    $data['kode'] = $userKey;
+    $data['kode'] = $userKey; $data['roleKey'] = 3;
     $this->db->insert('patients', $data);
     $this->db->trans_complete();
     return $this->db->trans_status();

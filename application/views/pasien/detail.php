@@ -15,14 +15,14 @@
     <div class="row g-4">
       <div class="col-12 col-md-6">
         <div class="pasien-form-floating">
-          <label>MRN</label>
-          <input type="text" class="pasien-input" id="det_mrn" value="<?= $result['mrn'] ?>" readonly>
+          <label>Nomor Induk Kependudukan</label>
+          <input type="text" class="pasien-input" id="det_nik" value="<?= $result['nik'] ?>" readonly>
         </div>
       </div>
       <div class="col-12 col-md-6">
         <div class="pasien-form-floating">
-          <label>Nomor Induk Kependudukan</label>
-          <input type="text" class="pasien-input" id="det_nik" value="<?= $result['nik'] ?>" readonly>
+          <label>Kode Rekam Medis</label>
+          <input type="text" class="pasien-input" id="det_mrn" value="<?= $result['mrn'] ?>" readonly>
         </div>
       </div>
       <div class="col-12 col-md-6">
@@ -86,7 +86,7 @@ function setEditable(editable) {
   $('#pasienDetail').attr('data-mode', editable ? 'edit' : 'view');
 
   // MRN & NIK are never editable, regardless of mode
-  $('#det_fullname, #det_alamat, #det_email, #det_phone, #det_dob').prop('readonly', !editable);
+  $('#det_fullname, #det_alamat, #det_email, #det_phone, #det_dob, #det_mrn').prop('readonly', !editable);
   $('#det_gender').prop('disabled', !editable);
 
   $('#btnToggleEditPasien')

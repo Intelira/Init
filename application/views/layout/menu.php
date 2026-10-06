@@ -40,7 +40,7 @@
 
     <?php if (permissible('app', 'readable')) { ?>
     <!-- App / Pengaturan -->
-    <a href="<?php echo base_url('app'); ?>" class="nav-link nav-item-float flex-fill <?php echo ($segment == 'app') ? 'text-primary active' : 'text-secondary'; ?>">
+    <a href="<?php echo base_url('app'); ?>" class="nav-link nav-item-float flex-fill <?php echo ($segment == 'app') ? 'text-primary active' : 'text-secondary'; ?>" style="display:none">
       <i class="bi bi-gear-fill fs-5"></i>
       <div class="nav-text">Aplikasi</div>
     </a>

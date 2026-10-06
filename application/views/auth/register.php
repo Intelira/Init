@@ -25,9 +25,14 @@
       <form action="<?php echo base_url('auth/publish'); ?>" method="POST" id="registerForm">
         <div class="row g-4">
           <!-- Nomor Induk Kependudukan -->
-          <div class="col-md-12">
+          <div class="col-md-6">
             <label class="form-label-fancy">Nomor Induk Kependudukan</label>
             <input type="text" name="nik" class="form-control fancy-input" id="regNik" placeholder="1234..." required>
+          </div>
+          <!-- Kode Rekam Medis -->
+          <div class="col-md-6">
+            <label class="form-label-fancy">Kode Rekam Medis</label>
+            <input type="text" name="mrn" class="form-control fancy-input" id="regMrn" placeholder="00000000" required>
           </div>
           <!-- Full Nama -->
           <div class="col-md-12">
@@ -35,16 +40,9 @@
             <input type="text" name="fullname" class="form-control fancy-input" id="regName" placeholder="Full Name" required>
           </div>
           <!-- Alamat -->
-          <div class="col-md-6">
+          <div class="col-md-12">
             <label class="form-label-fancy">Tempat Tinggal</label>
             <input type="text" name="alamat" id="alamat" class="form-control fancy-input" placeholder="Jalan Kemenangan.." required>
-          </div>
-          <!-- Alamat -->
-          <div class="col-md-6">
-            <label class="form-label-fancy">Daftar Sebagai</label>
-            <select name="roleKey" id="roleKey" name="roleKey" class="form-control fancy-input">
-              <option value="3">Pasien</option>
-            </select>
           </div>
           <!-- Electronic Mail -->
           <div class="col-md-6">
